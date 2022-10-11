@@ -19,6 +19,18 @@
                     <label>Jurusan</label>
                     <input type="text" name="jurusan" class="form-control" value="<?php echo $mhs->jurusan ?>">
                 </div>
+                <div class=" form-group">
+                    <label>Alamat</label>
+                    <input type="text" name="alamat" class="form-control" value="<?php echo $mhs->alamat ?>">
+                </div>
+                <div class=" form-group">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control" value="<?php echo $mhs->email ?>">
+                </div>
+                <div class=" form-group">
+                    <label>No. Telepon</label>
+                    <input type="text" name="no_telp" class="form-control" value="<?php echo $mhs->no_telp ?>">
+                </div>
                 <button type="reset" class="btn btn-danger">Reset</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
