@@ -5,29 +5,35 @@ class M_mahasiswa extends CI_Model
     {
         return $this->db->get('tb_mahasiswa');
     }
+
     public function input_data($data, $table)
     {
         $this->db->insert($table, $data);
     }
+
     public function hapus_data($where, $table)
     {
         $this->db->where($where);
         $this->db->delete($table);
     }
+
     public function edit_data($where, $table)
     {
         return $this->db->get_where($table, $where);
     }
+
     public function update_data($where, $data, $table)
     {
         $this->db->where($where);
         $this->db->update($table, $data);
     }
+
     public function detail_data($id = NULL)
     {
         $query = $this->db->get_where('tb_mahasiswa', array('id' => $id))->row();
         return $query;
     }
+
     public function get_keyword($keyword)
     {
         $this->db->select('*');
@@ -40,5 +46,18 @@ class M_mahasiswa extends CI_Model
         $this->db->or_like('email', $keyword);
         $this->db->or_like('no_telp', $keyword);
         return $this->db->get()->result();
+    }
+
+    public function get_data()
+    {
+        return $this->db->get('tb_mahasiswa')->result_array();
+    }
+
+    function jum_mahasiswa_perjurusan()
+    {
+        $this->db->group_by('jurusan');
+        $this->db->select('jurusan');
+        $this->db->select("count(*) as total");
+        return $this->db->from('tb_mahasiswa')->get()->result();
     }
 }
