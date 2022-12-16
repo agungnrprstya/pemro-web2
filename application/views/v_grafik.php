@@ -33,7 +33,7 @@
                     labels: [<?php echo $nama_jurusan; ?>],
                     datasets: [{
                         label: 'Data Jurusan Mahasiswa',
-                        backgroundColor: ['rgb(255, 99, 132)', 'rgba(56, 86, 255, 0.87)', 'rgb(60, 179, 113)', 'rgb(175, 238, 239)'],
+                        backgroundColor: ['rgb(255, 99, 132)', 'rgba(56, 86, 255, 0.87)', 'rgb(60, 179, 113)', 'rgb(175, 238, 239)', 'rgba(22, 12, 01)'],
                         borderColor: ['rgb(255, 99, 132)'],
                         data: [<?php echo $jumlah; ?>]
                     }]

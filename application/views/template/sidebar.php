@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-    <a href="http://localhost/pemro_web_2/mahasiswa" class="brand-link">
+    <a href="<?php echo base_url('pegawai') ?>" class="brand-link">
         <img src="<?php echo base_url() ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-2" style="opacity: 10">
         <span class="brand-text font-weight-light">Pemrograman Web 2</span>
     </a>
@@ -10,7 +10,7 @@
                 <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Muhammad Sumbul</a>
+                <a href="<?php echo base_url('pegawai/profile') ?>" class="d-block">Agung Nurprasetya Putra</a>
             </div>
         </div>
 
@@ -28,19 +28,50 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- <li class="nav-item menu-open"> -->
-                <a href="http://localhost/pemro_web_2/mahasiswa" class="nav-link">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                <a href="<?php echo base_url('pegawai') ?>" class="nav-link">
+                    <!-- <a href="http://localhost/pegawai/pegawai" class="nav-link"> -->
+                    <i class="fa fa-home"></i>
                     <p>
-                        Data Mahasiswa
+                        Dashboard
                         <!-- <i class="right fas fa-angle-left"></i> -->
                     </p>
                 </a>
-                <a href="http://localhost/pemro_web_2/mahasiswa/tampil_grafik" class="nav-link">
-                    <i class="fa fa-chart-area"></i>
+                <a href="<?php echo base_url('pegawai/data_pegawai') ?>" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class="fa fa-users"></i>
+                    <p>
+                        Data Pegawai
+                        <!-- <i class="right fas fa-angle-left"></i> -->
+                    </p>
+                </a>
+                <a href="<?php echo base_url('pegawai/data_dosen') ?>" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class="fa fa-users"></i>
+                    <p>
+                        Data Dosen
+                        <!-- <i class="right fas fa-angle-left"></i> -->
+                    </p>
+                </a>
+                <a href="<?php echo base_url('pegawai/about') ?>" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class="fa fa-info-circle"></i>
+                    <p>
+                        About
+                        <!-- <i class="right fas fa-angle-left"></i> -->
+                    </p>
+                </a>
+                <!-- <a href="<?php echo base_url('pegawai/data_dosen') ?>" class="nav-link">
+                    <i class="fa fa-graduation-cap"></i>
+                    <p>
+                        Data Dosen
+                    </p>
+                </a>
+                <a href="<?php echo base_url('pegawai/v_grafik') ?>" class="nav-link">
+                    <i class="fas fa-chart-area"></i>
                     <p>
                         Grafik Mahasiswa
                     </p>
-                </a>
+                </a> -->
 
                 <!-- <ul class="nav nav-treeview">
                     <li class="nav-item">

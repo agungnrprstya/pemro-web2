@@ -43,27 +43,27 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Mahasiswa</th>
-                    <th>NIM</th>
+                    <th>NIP</th>
                     <th>Tanggal Lahir</th>
-                    <th>Jurusan</th>
+                    <!-- <th>Jurusan</th> -->
                     <th>Alamat</th>
-                    <th>Email</th>
+                    <!-- <th>Email</th> -->
                     <th>No Telepon</th>
                     <th>Foto</th>
                 </tr>
                 <?php
                 $no = 1;
-                foreach ($mahasiswa as $mhs) : ?>
+                foreach ($pegawai as $pgw) : ?>
                     <tr>
                         <td><?php echo $no++ ?></td>
-                        <td><?php echo $mhs->nama ?></td>
-                        <td><?php echo $mhs->nim ?></td>
-                        <td><?php echo $mhs->tgl_lahir ?></td>
-                        <td><?php echo $mhs->jurusan ?></td>
-                        <td><?php echo $mhs->alamat ?></td>
-                        <td><?php echo $mhs->email ?></td>
-                        <td><?php echo $mhs->no_telp ?></td>
-                        <td><img src="<?php echo base_url() . 'assets/foto/' . $mhs->foto ?>" width="100" height="100"></td>
+                        <td><?php echo $pgw->nama ?></td>
+                        <td><?php echo $pgw->nip ?></td>
+                        <td><?php echo $pgw->tgl_lahir ?></td>
+                        <!-- <td><?php echo $pgw->jurusan ?></td> -->
+                        <td><?php echo $pgw->alamat ?></td>
+                        <!-- <td><?php echo $pgw->email ?></td> -->
+                        <td><?php echo $pgw->no_telp ?></td>
+                        <td><img src="<?php echo base_url() . 'assets/foto/' . $pgw->foto ?>" width="100" height="100"></td>
                     </tr>
                 <?php endforeach; ?>
     </table>
