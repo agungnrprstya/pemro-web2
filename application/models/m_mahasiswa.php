@@ -60,4 +60,9 @@ class M_mahasiswa extends CI_Model
         $this->db->select("count(*) as total");
         return $this->db->from('tb_mahasiswa')->get()->result();
     }
+
+    public function row($table)
+    {
+        return $this->db->get($table);
+    }
 }

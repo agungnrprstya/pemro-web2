@@ -29,14 +29,30 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- <li class="nav-item menu-open"> -->
                 <a href="http://localhost/pemro_web_2/mahasiswa" class="nav-link">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <i class="fa fa-home"></i>
+                    <p>
+                        Dashboard
+                        <!-- <i class="right fas fa-angle-left"></i> -->
+                    </p>
+                </a>
+                <a href="<?php echo base_url('mahasiswa/mahasiswa') ?>" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class="fa fa-users"></i>
                     <p>
                         Data Mahasiswa
                         <!-- <i class="right fas fa-angle-left"></i> -->
                     </p>
                 </a>
+                <a href="<?php echo base_url('mahasiswa/dosen') ?>" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class="fa fa-graduation-cap"></i>
+                    <p>
+                        Data Dosen
+                        <!-- <i class="right fas fa-angle-left"></i> -->
+                    </p>
+                </a>
                 <a href="http://localhost/pemro_web_2/mahasiswa/tampil_grafik" class="nav-link">
-                    <i class="fa fa-chart-area"></i>
+                    <i class="fas fa-chart-area"></i>
                     <p>
                         Grafik Mahasiswa
                     </p>

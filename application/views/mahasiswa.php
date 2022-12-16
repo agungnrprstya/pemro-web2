@@ -4,6 +4,15 @@
             <!-- <small>Control Panel</small> -->
         </h1>
         <?php echo $this->session->flashdata('message'); ?>
+        <?php
+        // $batas = 5;
+        // $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+        // $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : ;
+        // $previous = $halaman - 1;
+        // $next = $halaman + 1;
+        // $data = mysqli_query($koneksi, "select * from tb_mahasiswa LIMIT, $halaman_awal, $batas");
+        // $no = $halaman_awal+1;
+        ?>
         <nav class="navbar navbar-default">
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> Tambah Data Mahasiswa </button>
             <a class="btn btn-danger" href="<?php echo base_url('mahasiswa/print') ?>"><i class="fa fa-print"> Print </i></a>
@@ -27,7 +36,7 @@
                 <?php echo form_close() ?>
             </div>
         </nav>
-        <table class="table">
+        <table id="example3" class="table">
             <tr>
                 <th>NO</th>
                 <th>NAMA MAHASISWA</th>
@@ -59,6 +68,25 @@
                 </tr>
             <?php endforeach; ?>
         </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" style="justify-content:center;">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="mahasiswa">2</a></li>
+                <li class="page-item"><a class="page-link" href="mahasiswa">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </section>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -5,6 +5,15 @@ class Mahasiswa extends CI_Controller
 {
 	public function index()
 	{
+		// $data['dashboard'] = $this->m_mahasiswa->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('dashboard');
+		$this->load->view('template/footer');
+	}
+
+	public function mahasiswa()
+	{
 		$data['mahasiswa'] = $this->m_mahasiswa->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
@@ -229,6 +238,22 @@ class Mahasiswa extends CI_Controller
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$this->load->view('v_grafik', $data);
+		$this->load->view('template/footer');
+	}
+
+	public function dashboard()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('dashboard');
+		$this->load->view('template/footer');
+	}
+
+	public function dosen()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('dosen');
 		$this->load->view('template/footer');
 	}
 }
